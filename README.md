@@ -3,7 +3,7 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/AbdelkarimDouadjia/Grilli-restaurant-website)
   ![GitHub stars](https://img.shields.io/github/stars/AbdelkarimDouadjia/Grilli-restaurant-website?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/AbdelkarimDouadjia/Grilli-restaurant-website?style=social)
-  [![Twitter Follow](https://img.shields.io/twitter/follow/KarimDouadjia?style=social)](https://twitter.com/intent/follow?screen_name='Abdelkarim Douadjia 👨‍💻⚡')
+  [![Twitter Follow](https://img.shields.io/twitter/follow/KarimDouadjia?style=social)](https://twitter.com/intent/follow?screen_name=KarimDouadjia)
 
   <br />
   <br />
