@@ -1,21 +1,11 @@
 /*-----------------------------------*\
-  #index.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+
 :root {
+
   /**
-  * COLORS
+   * COLORS
    */
 
   --gold-crayola: hsl(38, 61%, 73%);
@@ -36,14 +26,14 @@
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**
-  * GRADIENT COLOR
+   * GRADIENT COLOR
    */
 
   --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%, transparent 66.66% 75%);
   --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
 
   /**
-  * TYPOGRAPHY
+   * TYPOGRAPHY
    */
 
   /* font-family */
@@ -85,27 +75,27 @@
   --letterSpacing-5: 3px;
 
   /**
-    * SPACING
-    */
+   * SPACING
+   */
 
   --section-space: 70px;
 
   /**
-    * SHADOW
-    */
+   * SHADOW
+   */
 
   --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
 
   /**
-    * BORDER RADIUS
-    */
+   * BORDER RADIUS
+   */
 
   --radius-24: 24px;
   --radius-circle: 50%;
 
   /**
-    * TRANSITION
-    */
+   * TRANSITION
+   */
 
   --transition-1: 250ms ease;
   --transition-2: 500ms ease;
@@ -191,20 +181,15 @@ body {
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
   overflow: hidden;
-  /** to hide the scrollbar */
   height: 300vh;
 }
 
 body.loaded {
-  /** we use overlay to show the scroll bar and to overide the overflow: hidden; and show the scroll var */
   overflow: overlay;
-  /*it is the same as auto but it is better when the scrollbar is not needed it will not appear */
-  /* we use overlay when we want to force the scrollbar to appear */
 }
 
 body.nav-active {
   overflow: hidden;
-  /* to hide the scrollbar after the nav is active */
 }
 
 ::-webkit-scrollbar {
@@ -218,6 +203,7 @@ body.nav-active {
 ::-webkit-scrollbar-thumb {
   background-color: var(--gold-crayola);
 }
+
 
 
 
@@ -320,10 +306,7 @@ body.nav-active {
 
 .contact-number {
   color: var(--gold-crayola);
-
   max-width: max-content;
-  /*The max-content sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows */
-
   margin-inline: auto;
 }
 
@@ -346,7 +329,7 @@ body.nav-active {
 }
 
 .hover-underline:is(:hover, :focus-visible)::after {
-  transform: scale(1);
+  transform: scaleX(1);
   opacity: 1;
 }
 
@@ -374,7 +357,7 @@ body.nav-active {
 }
 
 .section-subtitle::after {
-  content: url(../images/separator.svg);
+  content: url('../images/separator.svg');
   display: block;
   width: 100px;
   margin-inline: auto;
@@ -396,7 +379,6 @@ body.nav-active {
 }
 
 .btn::before {
-  /* to create the circle shape  and center it and place it behind the btn and in the top */
   content: "";
   position: absolute;
   bottom: 100%;
@@ -415,7 +397,6 @@ body.nav-active {
 }
 
 .btn .text-2 {
-  /* to make the text hide in the bottom of the button and dont appear intil he hover on the button */
   position: absolute;
   top: 100%;
   left: 50%;
@@ -442,7 +423,6 @@ body.nav-active {
   color: var(--black);
 }
 
-
 .btn-secondary::before {
   background-color: var(--smoky-black-1);
 }
@@ -464,7 +444,7 @@ body.nav-active {
 }
 
 .section {
-  position: realtive;
+  position: relative;
   padding-block: var(--section-space);
   overflow: hidden;
   z-index: 1;
@@ -494,14 +474,13 @@ body.nav-active {
   transform: skewX(-0.08turn) translateX(-180%);
 }
 
-.hover\:shine:is(:hover, :focus-visible)::after {
+.hover\:shine:is(:hover, :focus-within)::after {
   transform: skewX(-0.08turn) translateX(275%);
   transition: var(--transition-3);
 }
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  /*aspec ratio: */
   overflow: hidden;
   background-color: var(--eerie-black-4);
 }
@@ -554,7 +533,7 @@ body.nav-active {
 }
 
 .input-field {
-  background: var(--eerie-black-2);
+  background-color: var(--eerie-black-2);
   color: var(--white);
   height: 56px;
   padding: 10px 20px;
@@ -581,7 +560,6 @@ body.nav-active {
   margin-block-end: 0;
   padding-inline-start: 40px;
   appearance: none;
-  /*appearance property is used to hide the arrow in the select element or the checkbox */
   cursor: pointer;
 }
 
@@ -605,6 +583,7 @@ body.nav-active {
 
 
 
+
 /*-----------------------------------*\
   #PRELOAD
 \*-----------------------------------*/
@@ -620,9 +599,7 @@ body.nav-active {
   display: grid;
   place-content: center;
   justify-items: center;
-  transition: var(--transition-3);
-
-  display: none;
+  transition: var(--transition-2);
 }
 
 .preload>* {
@@ -667,19 +644,10 @@ body.nav-active {
   text-transform: uppercase;
   letter-spacing: 16px;
   padding-inline-start: 16px;
-
-  /*to do tranparent to the text */
   -webkit-text-fill-color: transparent;
-  /* it is the same as color property but it has hight precedense over the color property if they have different values */
-
-  /* to fill the background-color with the shape of the text ano transpad drent outside the text  and fill the color only in the text */
   background-clip: text;
-  /*The background-clip CSS property sets whether an element's background extends underneath its border box, padding box, or content box(boxmodel)or text, so all the outside content of these values will be trasparent */
   -webkit-background-clip: text;
-
-  /*to stroke the text with the color and thier width */
   -webkit-text-stroke: 0.5px var(--eerie-black-3);
-
   animation: loadingText linear 2s infinite;
 }
 
@@ -692,6 +660,8 @@ body.nav-active {
     background-position: 0%;
   }
 }
+
+
 
 
 
@@ -751,24 +721,22 @@ body.nav-active {
   padding-inline-end: 0;
 }
 
-
 .nav-open-btn .line {
   width: 30px;
   height: 2px;
   background-color: var(--white);
   margin-block: 4px;
-  color: rgb(18, 125, 174);
   transform-origin: left;
   animation: menuBtn 400ms ease-in-out alternate infinite;
 }
 
 @keyframes menuBtn {
   0% {
-    transform: scale(1)
+    transform: scaleX(1);
   }
 
   100% {
-    transform: scale(0.5)
+    transform: scaleX(0.5);
   }
 }
 
@@ -811,7 +779,7 @@ body.nav-active {
 }
 
 .navbar .close-btn ion-icon {
-  --ionicon-stroke-width: 48px;
+  --ionicon-stroke-width: 40px;
 }
 
 .navbar .close-btn:is(:hover, :focus-visible) {
@@ -922,15 +890,6 @@ body.nav-active {
 
 
 
-
-
-
-
-
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -1023,7 +982,7 @@ body.nav-active {
   margin-block-end: 6px;
 }
 
-.hero-btn span {
+.hero-btn .span {
   color: var(--black);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
@@ -1032,7 +991,6 @@ body.nav-active {
 }
 
 .hero-btn::after {
-  content: "";
   inset: 0;
   border: 1px solid var(--gold-crayola);
   animation: rotate360 15s linear infinite;
@@ -1044,7 +1002,7 @@ body.nav-active {
 }
 
 .hero .slider-item.active .slider-reveal {
-  animation: sliderReveal 2s ease-in-out forwards;
+  animation: sliderReveal 1s ease forwards;
 }
 
 @keyframes sliderReveal {
@@ -1079,7 +1037,6 @@ body.nav-active {
 
 
 
-
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
@@ -1097,8 +1054,8 @@ body.nav-active {
 }
 
 .service-card .has-before {
-  padding-block: 36px;
-  margin-block-end: 36px;
+  padding-block: 30px;
+  margin-block-end: 26px;
   z-index: 1;
 }
 
@@ -1116,11 +1073,9 @@ body.nav-active {
   transition-delay: 0;
   z-index: -1;
   will-change: transform;
-  /*The will-change CSS property hints to browsers how an element is expected to change*/
-  /* Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required. */
 }
 
-.service-card:is(:hover, :focus-visible) .has-before::before {
+.service-card:is(:hover, :focus-within) .has-before::before {
   transform: rotateY(0.5turn) translateX(50%);
   transition-delay: 300ms;
 }
@@ -1130,13 +1085,13 @@ body.nav-active {
 }
 
 .service-card:is(:hover, :focus-within) .card-banner {
-  /*focus-within property is */
   transform: scale(1.05);
 }
 
 .service .card-title {
   margin-block-end: 12px;
 }
+
 
 
 
@@ -1204,8 +1159,11 @@ body.nav-active {
   background-image: url('../images/badge-2-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
-  animation: rotate360 15S linear infinite;
+  animation: rotate360 15s linear infinite;
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -1245,6 +1203,7 @@ body.nav-active {
 .special-dish .btn {
   margin-inline: auto;
 }
+
 
 
 
@@ -1298,6 +1257,8 @@ body.nav-active {
   color: var(--eerie-black-1);
   font-family: var(--fontFamily-forum);
   max-width: max-content;
+  line-height: var(--lineHeight-6);
+  text-transform: uppercase;
   padding-inline: 10px;
   margin-block-start: 10px;
 }
@@ -1310,6 +1271,11 @@ body.nav-active {
 .menu-card .card-text {
   color: var(--quick-silver);
   line-height: var(--lineHeight-4);
+}
+
+.menu-text .span {
+  display: inline-block;
+  color: var(--gold-crayola);
 }
 
 .menu .btn {
@@ -1331,6 +1297,7 @@ body.nav-active {
   bottom: 0;
   right: 0;
 }
+
 
 
 
@@ -1372,7 +1339,6 @@ body.nav-active {
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-3);
-
 }
 
 
@@ -1449,6 +1415,9 @@ textarea.input-field {
 }
 
 
+
+
+
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
@@ -1487,6 +1456,9 @@ textarea.input-field {
   color: var(--quick-silver);
   line-height: var(--lineHeight-6);
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -1538,11 +1510,12 @@ textarea.input-field {
   transform: scale(1.05);
 }
 
-
 .event .btn {
   margin-inline: auto;
   margin-block-start: 40px;
 }
+
+
 
 
 
@@ -1557,7 +1530,7 @@ textarea.input-field {
 .footer-brand {
   position: relative;
   padding: 50px 40px;
-  background: var(--smoky-black-1) url('../images/footer-bg.png');
+  background: var(--smoky-black-1) url("../images/footer-form-bg.png");
   background-position: center top;
   background-repeat: repeat;
 }
@@ -1567,7 +1540,7 @@ textarea.input-field {
   top: 0;
   width: 15px;
   height: 100%;
-  background-image: url('../images/footer-form-pattern.svg');
+  background-image: url("../images/footer-form-pattern.svg");
 }
 
 .footer-brand::before {
@@ -1584,7 +1557,7 @@ textarea.input-field {
   margin-block-end: 40px;
 }
 
-.footer-brand :is(.body-4, .title-1, .label-1) {
+.footer-brand :is(.body-4, .label-1) {
   color: var(--quick-silver);
   line-height: var(--lineHeight-3);
 }
@@ -1653,8 +1626,9 @@ textarea.input-field {
   display: inline;
   color: var(--gold-crayola);
   text-decoration: underline;
-
 }
+
+
 
 
 
@@ -1694,48 +1668,51 @@ textarea.input-field {
 
 
 
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 
 /**
-  * responsive for larger then 575px screen
-  */
+ * responsive for larger than 575px screen
+ */
 
 @media (min-width: 575px) {
 
-/**
-  *CUSTOM PROPERTY
-  */
+  /**
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-  /**
-  * typography
-  */
+    /**
+     * typography
+     */
 
     --fontSize-body-2: 2rem;
+
   }
 
 
 
   /**
-  * REUSED STYLE
-  */
+   * REUSED STYLE
+   */
 
   :is(.service, .about) .section-text {
     max-width: 420px;
     margin-inline: auto;
   }
 
-  .contact-number { --fontSize-body-1: 3rem; }
-
+  .contact-number {
+    --fontSize-body-1: 3rem;
+  }
 
 
 
   /**
-  * TOPBAR
-  */
+   * TOPBAR
+   */
 
   .topbar {
     display: block;
@@ -1749,13 +1726,17 @@ textarea.input-field {
     transition: var(--transition-1);
   }
 
-  .topbar:has(~ .header.active) { transform: translateY(-100%); }
+  .topbar:has(~ .header.active) {
+    transform: translateY(-100%);
+  }
 
   .topbar-item:not(.link),
-  .topbar .separator { display: none; }
+  .topbar .separator {
+    display: none;
+  }
 
   .topbar .container,
-  .topbar-item { 
+  .topbar-item {
     display: flex;
     align-items: center;
   }
@@ -1765,26 +1746,39 @@ textarea.input-field {
     gap: 30px;
   }
 
-  .topbar-item { gap: 6px; }
+  .topbar-item {
+    gap: 6px;
+  }
 
-  .topbar-item ion-icon { --ionicon-stroke-width: 60px; }
+  .topbar-item ion-icon {
+    --ionicon-stroke-width: 60px;
+  }
 
-  .topbar-item .span { font-size: var(--fontSize-label-1); }
+  .topbar-item .span {
+    font-size: var(--fontSize-label-1);
+  }
 
-  .topbar .link { transition: var(--transition-1); }
+  .topbar .link {
+    transition: var(--transition-1);
+  }
 
-  .topbar .link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
-
+  .topbar .link:is(:hover, :focus-visible) {
+    color: var(--gold-crayola);
+  }
 
 
 
   /**
-  * HEADER
-  */
+   * HEADER
+   */
 
-  .header { top: 51px; }
+  .header {
+    top: 51px;
+  }
 
-  .header.active { top: 0; }
+  .header.active {
+    top: 0;
+  }
 
   .header .btn {
     display: block;
@@ -1794,17 +1788,18 @@ textarea.input-field {
 
 
   /**
-  * HERO
-  */
+   * HERO
+   */
 
-  .hero-btn { transform: scale(0.7); }
-
+  .hero-btn {
+    transform: scale(0.7);
+  }
 
 
 
   /**
-  * SERVICE
-  */
+   * SERVICE
+   */
 
   .service .container {
     max-width: 420px;
@@ -1813,25 +1808,31 @@ textarea.input-field {
 
 
 
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    gap: 80px;
+  }
+
+  .about-banner>.w-100 {
+    padding-inline-start: 90px;
+  }
+
+  .about .abs-img-1 {
+    width: 285px;
+  }
+
+  .about .contact-number {
+    --fontSize-body-1: 2.4rem;
+  }
+
+
 
   /**
-  * ABOUT
-  */
-
-  .about .container { gap: 80px; }
-
-  .about-banner > .w-100 { padding-inline-start: 90px; }
-
-  .about .abs-img-1 { width: 285px; }
-
-  .about .contact-number { --fontSize-body-1: 2.4rem; }
-
-
-
-
-  /**
-  * MENU
-  */
+   * MENU
+   */
 
   .menu-card .title-wrapper {
     display: flex;
@@ -1840,9 +1841,11 @@ textarea.input-field {
     gap: 15px;
   }
 
-  .menu-card .badge { margin-block-start: 0; }
+  .menu-card .badge {
+    margin-block-start: 0;
+  }
 
-  .menu-card .span { 
+  .menu-card .span {
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -1851,7 +1854,7 @@ textarea.input-field {
   }
 
   .menu-card .span::before {
-    content: '';
+    content: "";
     height: 6px;
     flex-grow: 1;
     border-block: 1px solid var(--white-alpha-20);
@@ -1860,8 +1863,8 @@ textarea.input-field {
 
 
   /**
-  * EVENT
-  */
+   * EVENT
+   */
 
   .event .container {
     max-width: 420px;
@@ -1870,18 +1873,18 @@ textarea.input-field {
 
 
 
-
-
   /**
-  * FOOTER
-  */
+   * FOOTER
+   */
 
-  .footer-brand > * { 
+  .footer-brand>* {
     max-width: 460px;
     margin-inline: auto;
   }
 
-  .footer .input-wrapper { position: relative; }
+  .footer .input-wrapper {
+    position: relative;
+  }
 
   .footer .input-field {
     margin-block-end: 0;
@@ -1893,29 +1896,35 @@ textarea.input-field {
     top: 0;
     right: 0;
     bottom: 0;
-    min-height: max-content;
+    min-width: max-content;
   }
+
 }
 
 
+
+
+
 /**
-  * responsive for larger then 768px screen
-  */
+ * responsive for larger than 768px screen
+ */
 
 @media (min-width: 768px) {
 
-
   /**
-  * REUSED STYLE
-  */
-  
-  .grid-list { grid-template-columns: 1fr 1fr; }
+   * REUSED STYLE
+   */
 
-  :is(.service, .event) .container { max-width: 820px; }
-  
-  
-  :is(.service, .event) .grid-list  li:last-child { 
-    grid-column: 1/3;
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :is(.service, .event) .container {
+    max-width: 820px;
+  }
+
+  :is(.service, .event) .grid-list li:last-child {
+    grid-column: 1 / 3;
     width: calc(50% - 20px);
     margin-inline: auto;
   }
@@ -1923,16 +1932,18 @@ textarea.input-field {
 
 
   /**
-  * HEADER
-  */
+   * HEADER
+   */
 
-  .navbar-list { margin-inline: 30px; }
+  .navbar-list {
+    margin-inline: 30px;
+  }
 
 
 
   /**
-  * HERO
-  */
+   * HERO
+   */
 
   .hero .slider-btn {
     display: grid;
@@ -1949,11 +1960,17 @@ textarea.input-field {
     transition: var(--transition-1);
   }
 
-  .hero .slider-btn ion-icon { transform: rotate(-45deg); }
+  .hero .slider-btn ion-icon {
+    transform: rotate(-45deg);
+  }
 
-  .hero .slider-btn.prev { left: 30px; }
+  .hero .slider-btn.prev {
+    left: 30px;
+  }
 
-  .hero .slider-btn.next { right: 30px; }
+  .hero .slider-btn.next {
+    right: 30px;
+  }
 
   .hero .slider-btn:is(:hover, :focus-visible) {
     background-color: var(--gold-crayola);
@@ -1963,8 +1980,8 @@ textarea.input-field {
 
 
   /**
-  * RESERVATION
-  */
+   * RESERVATION
+   */
 
   .reservation .input-wrapper {
     display: grid;
@@ -1978,47 +1995,53 @@ textarea.input-field {
 
 
 
-
   /**
-  * FOOTER
-  */
+   * FOOTER
+   */
 
-  .footer-brand { grid-column: 1 / 3; }
+  .footer-brand {
+    grid-column: 1 / 3;
+  }
 
 }
 
 
+
+
+
 /**
-  * responsive for larger then 992px screen
-  */
+ * responsive for larger than 992px screen
+ */
 
 @media (min-width: 992px) {
 
   /**
-  *CUSTOM PROPERTY
-  */
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-  /**
-  * spacing
-  */
+    /**
+     * spacing
+     */
 
     --section-space: 100px;
+
   }
 
 
 
-
-
   /**
-  * REUSED STYLE
-  */
+   * REUSED STYLE
+   */
 
-  :is(.service, .event) .container { max-width: unset; }
-  
-  :is(.service, .event) .grid-list { grid-template-columns: repeat(3, 1fr); }
+  :is(.service, .event) .container {
+    max-width: unset;
+  }
 
+  :is(.service, .event) .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   :is(.service, .event) .grid-list li:last-child {
     grid-column: auto;
@@ -2027,24 +2050,27 @@ textarea.input-field {
 
 
 
+  /**
+   * TOPBAR
+   */
+
+  .topbar-item:not(.link) {
+    display: flex;
+  }
+
+  .topbar .item-2 {
+    margin-inline-end: auto;
+  }
+
 
 
   /**
-  * TOPBAR
-  */
+   * SERVICE
+   */
 
-  .topbar-item:not(.link) { display: flex; }
-
-  .topbar .item-2 { margin-inline-end: auto; }
-
-
-
-
-  /**
-  * SERVICE
-  */
-
-  .service .shape { display: block; }
+  .service .shape {
+    display: block;
+  }
 
   .service .shape-1 {
     bottom: 0;
@@ -2053,15 +2079,14 @@ textarea.input-field {
 
   .service .shape-2 {
     top: 0;
-    right: 0
+    right: 0;
   }
 
 
 
-
   /**
-  * ABOUT
-  */
+   * ABOUT
+   */
 
   .about .container {
     grid-template-columns: 0.7fr 1fr;
@@ -2071,23 +2096,31 @@ textarea.input-field {
 
 
   /**
-  * SPECIAL DISH
-  */
+   * SPECIAL DISH
+   */
 
-  .special-dish { 
+  .special-dish {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: left;
   }
 
-  .special-dish-content { padding-inline: 50px 25px; }
+  .special-dish-content {
+    padding-inline: 50px 25px;
+  }
 
-  .special-dish-content .container { position: relative; }
+  .special-dish-content .container {
+    position: relative;
+  }
 
   .special-dish .section-subtitle::after,
-  .special-dish .btn { margin-inline: 0; }
+  .special-dish .btn {
+    margin-inline: 0;
+  }
 
-  .special-dish-content .wrapper { justify-content: flex-start; }
+  .special-dish-content .wrapper {
+    justify-content: flex-start;
+  }
 
   .special-dish .abs-img {
     position: absolute;
@@ -2099,8 +2132,8 @@ textarea.input-field {
 
 
   /**
-  * MENU
-  */
+   * MENU
+   */
 
   .menu .grid-list {
     position: relative;
@@ -2108,7 +2141,7 @@ textarea.input-field {
   }
 
   .menu .grid-list::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -2117,10 +2150,10 @@ textarea.input-field {
   }
 
 
-  
+
   /**
-  * TESTIMONIALS
-  */
+   * TESTIMONIALS
+   */
 
   .testi-text {
     max-width: 910px;
@@ -2130,8 +2163,8 @@ textarea.input-field {
 
 
   /**
-  * RESERVATION
-  */
+   * RESERVATION
+   */
 
   .reservation-form {
     display: grid;
@@ -2140,10 +2173,9 @@ textarea.input-field {
 
 
 
-
   /**
-  * FOOTER
-  */
+   * FOOTER
+   */
 
   .footer .grid-list {
     grid-template-columns: 0.45fr 1fr 0.45fr;
@@ -2156,37 +2188,41 @@ textarea.input-field {
     padding-block: 100px;
   }
 
-  .footer-list:last-child { order: 2; }
+  .footer-list:last-child {
+    order: 2;
+  }
 
 }
 
 
+
+
+
 /**
-  * responsive for larger then 1200px screen
-  */
+ * responsive for larger than 1200px screen
+ */
 
 @media (min-width: 1200px) {
 
   /**
-  *CUSTOM PROPERTY
-  */
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-  /**
-  * typography
-  */
+    /**
+     * typography
+     */
 
     --fontSize-title-2: 2.5rem;
+
   }
 
 
 
-
-
   /**
-  * REUSED STYLE
-  */
+   * REUSED STYLE
+   */
 
   .container,
   :is(.service, .event) .container {
@@ -2197,43 +2233,57 @@ textarea.input-field {
 
 
 
+  /**
+   * TOPBAR
+   */
+
+  .topbar .container {
+    max-width: unset;
+  }
+
+  .topbar .separator {
+    display: block;
+  }
+
 
 
   /**
-  * TOPBAR
-  */
-
-  .topbar .container { max-width: unset; }
-
-  .topbar .separator { display: block; }
-
-
-
-  /**
-  * HEADER
-  */
+   * HEADER
+   */
 
   .nav-open-btn,
-  .navbar > *:not(.navbar-list),
-  .header .overlay { display: none; }
+  .navbar>*:not(.navbar-list),
+  .header .overlay {
+    display: none;
+  }
 
-  .header .container { max-width: unset; }
+  .header .container {
+    max-width: unset;
+  }
 
   .navbar,
   .navbar.active,
-  .navbar-list { all: unset; }
+  .navbar-list {
+    all: unset;
+  }
 
   .navbar,
-  .navbar.active { margin-inline: auto 20px; }
+  .navbar.active {
+    margin-inline: auto 20px;
+  }
 
   .navbar-list {
     display: flex;
     gap: 30px;
   }
 
-  .navbar-item { border-block-start: none; }
+  .navbar-item {
+    border-block-start: none;
+  }
 
-  .navbar .separator { display: none; }
+  .navbar .separator {
+    display: none;
+  }
 
   .navbar-link:is(:hover, :focus-visible, .active) .span {
     transform: unset;
@@ -2244,58 +2294,68 @@ textarea.input-field {
     letter-spacing: var(--letterSpacing-1);
   }
 
-  .navbar-link::after { display: block; } 
+  .navbar-link::after {
+    display: block;
+  }
 
   .navbar-link.active::after {
     transform: scaleX(1);
     opacity: 1;
   }
 
-  .header .btn { margin-inline-start: 0; }
-
+  .header .btn {
+    margin-inline-start: 0;
+  }
 
 
 
   /**
-  * HERO
-  */
+   * HERO
+   */
 
-  .hero { height: 880px; }
+  .hero {
+    height: 880px;
+  }
 
   .hero-btn {
     bottom: 50px;
+    right: 50px;
     transform: scale(1);
   }
 
 
 
+  /**
+   * SERVICE
+   */
 
+  .service .grid-list {
+    gap: 150px;
+  }
+
+  .service .grid-list li:nth-child(2n+1) {
+    transform: translateY(-160px);
+  }
+
+  .service .section-text {
+    margin-block-end: 75px;
+  }
 
 
 
   /**
-  * SERVICE
-  */
+   * ABOUT
+   */
 
-  .service .grid-list { gap: 150px; }
-
-  .service .grid-list li:nth-child(2n+1) { transform: translateY(-160px); }
-
-  .service.section-text { margin-block-end: 75px; }
-
-
-  /**
-  * ABOUT
-  */
-
-  .about { padding-block: 170px 100px; }
-
+  .about {
+    padding-block: 170px 100px;
+  }
 
 
 
   /**
-  * SPECIAL DISH
-  */
+   * SPECIAL DISH
+   */
 
   .special-dish-content {
     padding: 225px 120px;
@@ -2308,9 +2368,10 @@ textarea.input-field {
   }
 
 
+
   /**
-  * MENU
-  */
+   * MENU
+   */
 
   .menu .grid-list {
     gap: 55px 200px;
@@ -2319,42 +2380,55 @@ textarea.input-field {
 
 
 
-
   /**
-  * TESTIMONIALS
-  */
+   * TESTIMONIALS
+   */
 
   .form-left,
-  .form-right { padding: 75px 60px; }
+  .form-right {
+    padding: 75px 60px;
+  }
+
+
 
 
   /**
-  * FEATURES
-  */
-  
-  .features .grid-list { grid-template-columns: repeat(4, 1fr); }
+   * FEATURES
+   */
+
+  .features .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
 }
 
 
+
+
+
 /**
-  * responsive for larger then 1400px screen
-  */
+ * responsive for larger than 1400px screen
+ */
 
 @media (min-width: 1400px) {
 
   /**
-  * HEADER
-  */
+   * HEADER
+   */
 
-  .navbar { margin-inline: auto; }
+  .navbar {
+    margin-inline: auto;
+  }
+
 
 
   /**
-  * ABOUT
-  */
+   * ABOUT
+   */
 
-  .about-content { padding-inline-end: 90px; }
+  .about-content {
+    padding-inline-end: 90px;
+  }
 
   .about .shape {
     display: block;
@@ -2363,9 +2437,10 @@ textarea.input-field {
   }
 
 
+
   /**
-  * SPECIAL DISH
-  */
+   * SPECIAL DISH
+   */
 
   .special-dish {
     overflow: visible;
@@ -2378,7 +2453,9 @@ textarea.input-field {
     z-index: 1;
   }
 
-  .special-dish .shape-1 { top: 45%; }
+  .special-dish .shape-1 {
+    top: 45%;
+  }
 
   .special-dish .shape-2 {
     bottom: 0;
@@ -2389,12 +2466,16 @@ textarea.input-field {
 
 
   /**
-  * FEATURES
-  */
-  
-  .features { overflow: visible; }
+   * FEATURES
+   */
 
-  .features .shape { display: block; }
+  .features {
+    overflow: visible;
+  }
+
+  .features .shape {
+    display: block;
+  }
 
   .features .shape-1 {
     top: -100px;
@@ -2405,4 +2486,5 @@ textarea.input-field {
     bottom: 80px;
     left: 0;
   }
+
 }
