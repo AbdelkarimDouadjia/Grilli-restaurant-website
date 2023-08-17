@@ -3,77 +3,74 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- 
-    - primary meta tags
-  -->
+        - Primary meta tags
+    -->
   <title>Grilli - Amazing & Delicious Food</title>
-  <meta name="title" content="Grilli - Amazing & Delicious Food">
+  <meta name="title" content="Grilli & Delicious Food" />
   <meta name="description" content="This is a Restaurant html template made by codewithsadee">
 
   <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+        - favicon
+    -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
   <!-- 
-    - google font link
-  -->
+        - google font link
+    -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--
+        - custom css link
+    -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+        - preload images
+    -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg" />
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
+  <!-- preload: is command to tell browsers you’d like them to fetch an important resource sooner -->
+
 
 </head>
 
 <body id="top">
 
-  <!-- 
-    - #PRELOADER
-  -->
 
-  <div class="preload" data-preaload>
+  <!-- 
+        - #PRELOADER
+    -->
+  <div class="preload" data-preloader>
     <div class="circle"></div>
-    <p class="text">Grilli</p>
+    <div class="text">Grilli</div>
   </div>
 
 
 
-
-
   <!-- 
-    - #TOP BAR
-  -->
+        - #TOPBAR
+    -->
 
   <div class="topbar">
     <div class="container">
-
       <address class="topbar-item">
         <div class="icon">
           <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">
-          Restaurant St, Delicious City, London 9578, UK
+        <span class="span">Restaurant St, Delicious City>markdown: Ma, London 9578, UK
         </span>
       </address>
 
       <div class="separator"></div>
 
-      <div class="topbar-item item-2">
+      <div class="topbar-item item2">
         <div class="icon">
           <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
         </div>
@@ -105,10 +102,9 @@
 
 
 
-
   <!-- 
-    - #HEADER
-  -->
+        - #HEADER
+    -->
 
   <header class="header" data-header>
     <div class="container">
@@ -138,7 +134,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
+            <a href="#menus" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Menus</span>
@@ -185,14 +181,13 @@
 
           <div class="separator"></div>
 
-          <p class="contact-label">Booking Request</p>
+          <div class="contact-label">Booking Request</div>
 
-          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
-            +88-123-123456
-          </a>
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
         </div>
 
       </nav>
+
 
       <a href="#" class="btn btn-secondary">
         <span class="text text-1">Find A Table</span>
@@ -207,20 +202,16 @@
       </button>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
-
-
-
 
 
   <main>
     <article>
 
       <!-- 
-        - #HERO
-      -->
+                - #HERO
+            -->
 
       <section class="hero text-center" aria-label="home" id="home">
 
@@ -251,7 +242,7 @@
 
           </li>
 
-          <li class="slider-item" data-hero-slider-item>
+          <li class="slider-item active" data-hero-slider-item>
 
             <div class="slider-bg">
               <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
@@ -276,7 +267,7 @@
 
           </li>
 
-          <li class="slider-item" data-hero-slider-item>
+          <li class="slider-item active" data-hero-slider-item>
 
             <div class="slider-bg">
               <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
@@ -323,20 +314,23 @@
 
 
 
-      <!-- 
-        - #SERVICE
-      -->
 
-      <section class="section service bg-black-10 text-center" aria-label="service">
+
+      <!-- 
+                - #SERVICE
+            -->
+
+      <section class="section service bg-black-10 text-center">
         <div class="container">
 
           <p class="section-subtitle label-2">Flavors For Royalty</p>
 
-          <h2 class="headline-1 section-title">We Offer Top Notch</h2>
+          <h3 class="headline-1 section-title">We Offer Top Notch</h3>
 
           <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys
-            standard dummy text ever.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been
+            the industrys standard
+            dummy text ever.
           </p>
 
           <ul class="grid-list">
@@ -414,6 +408,7 @@
 
           <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
             class="shape shape-1 move-anim">
+
           <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
 
@@ -422,11 +417,9 @@
 
 
 
-
-
       <!-- 
-        - #ABOUT
-      -->
+                - #ABOUT
+            -->
 
       <section class="section about text-center" aria-labelledby="about-label" id="about">
         <div class="container">
@@ -438,9 +431,11 @@
             <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2>
 
             <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book It has survived not only five centuries, but also the leap into.
+              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has
+              been the industrys standard
+              dummy text ever since the when an unknown printer took a galley of type and scrambled it to
+              make a type specimen book It
+              has survived not only five centuries, but also the leap into.
             </p>
 
             <div class="contact-label">Book Through Call</div>
@@ -478,11 +473,9 @@
 
 
 
-
-
       <!-- 
-        - #SPECIAL DISH
-      -->
+                - #SPECIAL DISH
+            -->
 
       <section class="special-dish text-center" aria-labelledby="dish-label">
 
@@ -502,7 +495,8 @@
 
             <p class="section-text">
               Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type.
+              industrys standard
+              dummy text ever since the when an unknown printer took a galley of type.
             </p>
 
             <div class="wrapper">
@@ -522,17 +516,15 @@
 
         <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
 
-        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
+        <img src="./assets/images/shape-9.png" width="352" height="462" loading="lazy" alt="" class="shape shape-2">
 
       </section>
 
 
 
-
-
       <!-- 
-        - #MENU
-      -->
+                - #MENU
+            -->
 
       <section class="section menu" aria-label="menu-label" id="menu">
         <div class="container">
@@ -563,9 +555,8 @@
                     <span class="span title-2">$25.50</span>
                   </div>
 
-                  <p class="card-text label-1">
-                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
-                  </p>
+                  <p class="card-text label-1">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta
+                    cheese.</p>
 
                 </div>
 
@@ -587,11 +578,12 @@
                       <a href="#" class="card-title">Lasagne</a>
                     </h3>
 
+                    <span class="badge label-1">Seasonal</span>
+
                     <span class="span title-2">$40.00</span>
                   </div>
 
-                  <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                  <p class="card-text label-1">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
                   </p>
 
                 </div>
@@ -723,27 +715,29 @@
 
           <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
+
           <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-3 move-anim">
 
         </div>
+
+
       </section>
 
 
 
 
-
       <!-- 
-        - #TESTIMONIALS
-      -->
+                - #TESTIMONIALS
+            -->
 
       <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        style="background-image: url('./assets/images/testimonial-bg.jpg');" aria-label="testimonials">
         <div class="container">
 
           <div class="quote">”</div>
 
-          <p class="headline-2 testi-text">
+          <p class="headine-2 testi-text">
             I wanted to thank you for inviting me down for that amazing dinner the other night. The food was
             extraordinary.
           </p>
@@ -766,16 +760,14 @@
 
 
 
-
-
       <!-- 
-        - #RESERVATION
-      -->
+                - #RESERVATION
+            -->
 
       <section class="reservation">
         <div class="container">
 
-          <div class="form reservation-form bg-black-10">
+          <div class="form reservation-form bg-block-10">
 
             <form action="" class="form-left">
 
@@ -824,9 +816,9 @@
                   <select name="person" class="input-field">
                     <option value="08:00am">08 : 00 am</option>
                     <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
+                    <option value="10:00am">10 : 00 am</option>
+                    <option value="11:00am">11 : 00 am</option>
+                    <option value="12:00am">12 : 00 am</option>
                     <option value="01:00pm">01 : 00 pm</option>
                     <option value="02:00pm">02 : 00 pm</option>
                     <option value="03:00pm">03 : 00 pm</option>
@@ -854,7 +846,7 @@
 
             </form>
 
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png');">
 
               <h2 class="headline-1 text-center">Contact Us</h2>
 
@@ -895,15 +887,14 @@
 
 
 
-
       <!-- 
-        - #FEATURES
-      -->
+                - #FEATURES
+            -->
 
       <section class="section features text-center" aria-label="features">
         <div class="container">
 
-          <p class="section-subtitle label-2">Why Choose Us</p>
+          <p class="section-subtitle lebel-2">Why Choose Us</p>
 
           <h2 class="headline-1 section-title">Our Strength</h2>
 
@@ -967,7 +958,7 @@
 
           </ul>
 
-          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+          <img src="./assets/images/shape-7.png" width="200" height="178" loading="lazy" alt="shape"
             class="shape shape-1">
 
           <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
@@ -979,12 +970,11 @@
 
 
 
-
       <!-- 
-        - #EVENT
-      -->
+                - #EVENT
+            -->
 
-      <section class="section event bg-black-10" aria-label="event">
+      <section class="section event bg-block-10" aria-label="event">
         <div class="container">
 
           <p class="section-subtitle label-2 text-center">Recent Updates</p>
@@ -996,7 +986,7 @@
             <li>
               <div class="event-card has-before hover:shine">
 
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                <div class="card-banner imlg-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
@@ -1006,10 +996,9 @@
                 <div class="card-content">
                   <p class="card-subtitle label-2 text-center">Food, Flavour</p>
 
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
+                  <h3 class="card-title title-2 text-center">Flavour so good you’ll try to eat with your eyes.</h3>
                 </div>
+
 
               </div>
             </li>
@@ -1017,7 +1006,7 @@
             <li>
               <div class="event-card has-before hover:shine">
 
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                <div class="card-banner imlg-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
@@ -1027,10 +1016,9 @@
                 <div class="card-content">
                   <p class="card-subtitle label-2 text-center">Healthy Food</p>
 
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
+                  <h3 class="card-title title-2 text-center">Flavour so good you’ll try to eat with your eyes.</h3>
                 </div>
+
 
               </div>
             </li>
@@ -1038,7 +1026,7 @@
             <li>
               <div class="event-card has-before hover:shine">
 
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                <div class="card-banner imlg-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
@@ -1048,10 +1036,9 @@
                 <div class="card-content">
                   <p class="card-subtitle label-2 text-center">Recipie</p>
 
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
+                  <h3 class="card-title title-2 text-center">Flavour so good you’ll try to eat with your eyes.</h3>
                 </div>
+
 
               </div>
             </li>
@@ -1067,6 +1054,7 @@
         </div>
       </section>
 
+
     </article>
   </main>
 
@@ -1074,12 +1062,13 @@
 
 
 
+
   <!-- 
-    - #FOOTER
-  -->
+        - #FOOTER
+    -->
 
   <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer-bg.jpg')">
+    style="background-image: url('./assets/images/footer-bg.jpg');">
     <div class="container">
 
       <div class="footer-top grid-list">
@@ -1094,7 +1083,7 @@
             Restaurant St, Delicious City, London 9578, UK
           </address>
 
-          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
+          <a href="maitlto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
 
           <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
 
@@ -1187,6 +1176,7 @@
             target="_blank" class="link">Abdelkarim Douadjia</a>
         </p>
 
+
       </div>
 
     </div>
@@ -1194,11 +1184,9 @@
 
 
 
-
-
   <!-- 
-    - #BACK TO TOP
-  -->
+        - #BACK TO TOP
+    -->
 
   <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
@@ -1208,17 +1196,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   <!-- 
-    - custom js link
-  -->
+        - custom js link
+    -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
-    - ionicon link
-  -->
+  <!--
+        - inoicon link
+    -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
+
+<!-- object_fit: The object-fit property tells the browser how to position the element within its container. In this case, cover will set the image to fill the container, cropping as needed to avoid changing the aspect ratio. -->
