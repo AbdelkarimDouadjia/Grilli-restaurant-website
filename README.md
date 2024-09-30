@@ -20,7 +20,7 @@
 
 ### Demo Screeshots
 
-![Grilli Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Grilli Desktop Demo](https://github.com/AbdelkarimDouadjia/portfolio/blob/main/src/assets/Grilli-restaurant-website.png?raw=true)
 
 ### Prerequisites
 
